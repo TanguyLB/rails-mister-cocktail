@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6 col-xs-offset-3">
+      <h1><%= @cocktail.name %></h1>
+      <ul class="list-unstyled">
+        <% @cocktail.ingredients.each do |ingredient| %>
+          <li class="li-bold"><%= ingredient.name %></li>
+          <% ingredient.doses.each do |dose| %>
+            <li><%= dose.description%></li>
+          <% end %>
+        <% end %>
+        <li><%= link_to 'Add a dose', new_cocktail_dose_path(@cocktail)  %></li>
+        <li><%= link_to 'Delete a dose', new_cocktail_dose_path(@cocktail)  %></li>
+        <li><%= link_to 'Back to list', cocktails_path  %></li>
+      </ul>
+    </div>
+  </div>
+</div>

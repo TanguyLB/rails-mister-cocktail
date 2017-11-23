@@ -16,3 +16,7 @@ document.each do |ingredient|
 end
 
 
+Cocktail.create(name: "Cuba Libre")
+Dose.create(description: "6", cocktail_id: 1, ingredient_id: 1)
+Dose.create(description: "4", cocktail_id: 1, ingredient_id: 2)
+Dose.create(description: "3", cocktail_id: 1, ingredient_id: 3)
