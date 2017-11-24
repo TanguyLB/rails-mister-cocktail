@@ -5,6 +5,10 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+#image upload
+gem 'cloudinary'
+gem 'carrierwave', '~> 1.2'
+
 #security
 gem 'figaro'
 
